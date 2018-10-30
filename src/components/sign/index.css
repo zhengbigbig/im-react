@@ -1,0 +1,30 @@
+@import '../common/css/variable';
+@import '../common/css/common';
+
+.sign{
+    //background-color:$primary;
+    background: #FFF;
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 30px;
+    border-radius: 3px;
+}
+
+.loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.button:hover {
+    opacity: .8;
+}

@@ -1,0 +1,40 @@
+@import '../../common/css/variable';
+.slidebar{
+    width: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color:$primary;
+    color:#FFF;
+    z-index:100;
+    .profile{
+        margin-top:20px;
+        .name{
+            overflow: hidden;
+            margin: 2px 6px;
+        }
+    }
+    .menus{
+        margin-top:10px;
+        .app-item{
+            margin-top:10px;
+        }
+
+    }
+    .iconfont{
+        font-size:$font-size-xlarge;
+    }
+    .app-item{
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .footer{
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+    }
+    
+}
+

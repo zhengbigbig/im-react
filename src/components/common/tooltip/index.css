@@ -1,0 +1,14 @@
+.tooltip{
+    width: 400px;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    margin-left: -200px;
+    text-align: center;
+    background: #d2c75d;
+    padding: 10px;
+    border-radius: 5px;
+    &.error{
+        background-color:red;
+    }
+}

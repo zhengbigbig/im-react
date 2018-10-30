@@ -1,0 +1,62 @@
+import React, { Component } from 'react';
+import tooltip from '../common/tooltip';
+import {changePage} from '@data/actions/global';
+import {connect} from 'react-redux';
+// import createHistory from 'history/createHashHistory'
+
+// const history = createHistory()
+
+import history from '../../history/history';
+
+
+@connect(
+    state => ({
+        
+    }),
+    {
+        changePage 
+    }
+)
+export default class SignIn extends Component {
+    
+    //参考http://docs.easemob.com/im/400webimintegration/25intiate
+    signin = () => {
+        var username = this.refs.name.value;
+        var auth = this.refs.auth.value;
+        let {changePage} = this.props;
+        var options = {
+            apiUrl: WebIM.config.apiURL,
+            user: username.toLowerCase(),
+            pwd: auth,
+            appKey: WebIM.config.appkey,
+            success:  (token) => {
+                //alert('登录成功')
+                changePage('chat');
+                history.push('/chat');
+            },
+            error: function () {
+                tooltip.show({
+                    content: '登录失败'
+                });
+
+            }
+        };
+
+        sdk.conn.open(options);
+        
+    }
+    render() {
+        return (
+            <div className={'webim-sign webim-signup'}>
+                <h2>登录页面</h2>
+                <input ref='name' name="name" placeholder='输入用户名' autoFocus={true}/>
+                <input ref='auth' name="auth" placeholder='输入密码' type='password'/>
+                <button onClick={this.signin}>登录</button>
+                <p>没有账号，请,
+                    <i onClick={this.signup}>注册 </i>
+                </p>
+            </div>
+        );
+        
+    }
+}

@@ -1,0 +1,74 @@
+import React, {PropTypes} from 'react';
+import ReactDOM from 'react-dom';
+class Tooltip extends React.Component {
+    static defaultProps = {
+       time : 3000 // 3s 后自动消失
+    };
+
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        
+    }
+
+    componentWillUnmount() {
+        
+
+    }
+
+
+
+
+
+    render() {
+        
+        return (
+            <div >
+               {this.props.content}
+            </div>
+        )
+    }
+}
+
+let div = null;
+
+/**
+ * @param props
+ * target
+ */
+
+function show(props) {
+    if (div) {
+        close();
+    }
+
+
+    div = document.createElement('div');
+    document.body.appendChild(div);
+    ReactDOM.render(
+        <Tooltip  {...props}/>
+        , div);
+    return div;
+
+
+}
+
+function close() {
+    try {
+        if (div) {
+            ReactDOM.unmountComponentAtNode(div);
+            div.parentNode.removeChild(div);
+            div = null;
+        }
+    } catch(e) {
+        //catch
+    }
+
+}
+
+export default {
+    show: show,
+    close: close
+}

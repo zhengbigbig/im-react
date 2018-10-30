@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 471732 */
+  src: url('//at.alicdn.com/t/font_471732_f2exq127fg3qh0k9.eot');
+  src: url('//at.alicdn.com/t/font_471732_f2exq127fg3qh0k9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_471732_f2exq127fg3qh0k9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_471732_f2exq127fg3qh0k9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_471732_f2exq127fg3qh0k9.svg#iconfont') format('svg');
+}
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-setting1:before { content: "\e65e"; }
+
+.icon-usered:before { content: "\e68c"; }
+
+.icon-chat:before { content: "\e665"; }
+
+.icon-logout:before { content: "\e636"; }
+
+.icon-chat1:before { content: "\e626"; }
+.icon-close:before { content: "\e63c"; }
+.icon-add:before { content: "\e605"; }
+
+
+#root{
+      background: #EEE;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+}

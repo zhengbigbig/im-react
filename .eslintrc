@@ -1,0 +1,10 @@
+{
+	"extends": "react-app",
+    "globals": {
+        "WebIM": true,
+		"sdk": true
+		
+    },
+    "rules": {
+    }
+}

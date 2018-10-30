@@ -1,0 +1,12 @@
+@import '../common/css/variable';
+
+.ctn-chat{
+    width: $width;
+    background: #FFF;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -320px;
+    height: 540px;
+    margin-top: -270px;
+}
